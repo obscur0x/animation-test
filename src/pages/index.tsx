@@ -88,7 +88,7 @@ export default function Home() {
             animate={{
               opacity: progress > -25 ? 1 : 0
             }}
-            initial={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
             transition={{
               duration: 1,
               ease: "easeInOut"
