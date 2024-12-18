@@ -47,7 +47,7 @@ export default function Home() {
                 animate={{ x: `${500 + (textWidth / 3)}%`, opacity: 1 }}
                 transition={{ 
                   duration: 5,
-                  ease: [0.3, 0.13, 0.23, 0.96],
+                  ease: [0.3, 0.13, 0.23, 0.6],
                   opacity: {
                     duration: 5,
                     ease: "linear"
@@ -61,10 +61,10 @@ export default function Home() {
                 animate={{ x: "100%" }}
                 transition={{ 
                   duration: 6,
-                  ease: [0.3, 0.13, 0.23, 0.96]
+                  ease: [0.3, 0.13, 0.23, 0.6]
                 }}
                 whileInView={{
-                  backdropFilter: ["blur(1px)", "blur(7px)", "blur(1px)"],
+                  backdropFilter: ["blur(1px)", "blur(6px)", "blur(1px)"],
                   transition: {
                     backdropFilter: {
                       duration: 3.5,
@@ -83,21 +83,31 @@ export default function Home() {
             </>
           )}
 
-          {progress > -5 && (
-            <div className="absolute left-2 top-2 w-min z-20 whitespace-nowrap bg-black">
+
+<motion.div
+            animate={{
+              opacity: progress > -25 ? 1 : 0
+            }}
+            initial={{ opacity: 1 }}
+            transition={{
+              duration: 1,
+              ease: "easeInOut"
+            }}
+          >
+           <div className="absolute left-2 top-2 w-min z-20 whitespace-nowrap bg-black">
                 <div className="relative">
                   {initialText}
               </div>
             </div>
-          )}
+          </motion.div>
           
           <motion.div
             animate={{
-              opacity: progress > -20 ? 0 : 1
+              opacity: progress > -25 ? 0 : 1
             }}
             initial={{ opacity: 1 }}
             transition={{
-              duration: 0.4,
+              duration: 0.9,
               ease: "easeInOut"
             }}
           >
