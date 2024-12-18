@@ -7,7 +7,7 @@ export default function Home() {
   const [progress, setProgress] = useState(-100)
   const textRef = useRef<HTMLDivElement>(null)
   const [textWidth, setTextWidth] = useState(0)
-  const [initialText, setInitialText] = useState("Use ")
+  const [initialText, setInitialText] = useState("Use all text lengths")
   const [finalText, setFinalText] = useState("test whatever text your heart desires")
 
   useEffect(() => {
