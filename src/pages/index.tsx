@@ -103,11 +103,11 @@ export default function Home() {
           
           <motion.div
             animate={{
-              opacity: progress > -25 ? 0 : 1
+              opacity: progress > -32 ? 0 : 1
             }}
             initial={{ opacity: 1 }}
             transition={{
-              duration: 0.9,
+              duration: 0.8,
               ease: "easeInOut"
             }}
           >
